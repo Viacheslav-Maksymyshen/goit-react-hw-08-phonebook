@@ -1,11 +1,11 @@
 import { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { getAuth } from 'redux/auth/authSlice';
-import { registerUser } from 'redux/auth/authOperations';
+import { getAuth } from 'redux/mySlice/authSlice';
+import { registerUser } from 'redux/authOperations';
 
-import css from '../ContactForm/ContactForm.module.css';
-import { Loader } from '../Loader/Loader';
+import css from '../../components/ContactForm';
+import { Loader } from '../../components/Loader/Loader';
 
 const RegisterForm = () => {
   const [name, setName] = useState('');

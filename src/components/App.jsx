@@ -5,14 +5,14 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchCurrentUser } from 'redux/authOperations';
 import { getAuth } from 'redux/mySlice/authSlice';
-import { PrivateRoute } from 'components/Routes/PrivateRoute';
-import { PublicRoute } from 'components/Routes/PublicRoute';
+import { PrivateRoute } from './PrivateRoute/PrivateRoute';
+import { PublicRoute } from './PublicRoute/PublicRoute';
 
 import { Layout } from './Layout/Layout';
 import { LoaderRoute } from './Loader/Loader';
 const Phonebook = lazy(() => import('pages/Phonebook/Phonebook'));
-const RegisterForm = lazy(() => import('pages/RegisterForm/RegisterForm'));
-const LoginForm = lazy(() => import('pages/LoginForm/LoginForm'));
+const RegisterForm = lazy(() => import('pages/RegisterForm/RegistrForm'));
+const LoginForm = lazy(() => import('pages/LoginForm/loginForm'));
 const PageNotFound = lazy(() => import('pages/NotFoundPage'));
 
 export const App = () => {

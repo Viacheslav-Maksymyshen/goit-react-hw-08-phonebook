@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAuth } from 'redux/auth/authSlice';
-import { logoutUser } from 'redux/auth/authOperations';
+import { getAuth } from 'redux/mySlice/authSlice';
+import { logoutUser } from 'redux/authOperations';
 import { NavLink, useNavigate } from 'react-router-dom';
 import css from '../UserMenu/UserMenu.module.css';
 
