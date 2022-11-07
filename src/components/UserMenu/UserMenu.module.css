@@ -3,8 +3,8 @@ body {
 }
 .navWrapper {
   display: flex;
-  padding: 20px 20px 20px 0;
-  justify-content: flex-end;
+  padding: 20px 0 20px 0;
+
   border-bottom: 1px solid rgb(255, 255, 255);
 }
 
@@ -18,8 +18,8 @@ body {
 .menuWrapper {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 325px;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .link {
@@ -28,16 +28,20 @@ body {
   padding: 5px;
   text-decoration: none;
   text-align: center;
-  background: #8c7c75;
+  background: gray;
   color: white;
   border-radius: 4px;
   border: none;
 }
 
+.link:not(:last-child) {
+  margin-right: 20px;
+}
+
 .link:hover,
 .link:focus,
 .link.active {
-  background: #2c2624;
+  background: DarkSlateGrey;
 }
 
 .greeting {

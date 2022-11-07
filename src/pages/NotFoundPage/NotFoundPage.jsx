@@ -1,11 +1,11 @@
-import { HiOutlineEmojiSad } from 'react-icons/hi';
+import { FcReddit } from 'react-icons/fc';
 import style from './NotFoundPage.module.css';
 
 export default function NotFoundPage() {
   return (
     <div className={style.NotFoundPage}>
       <h1>404 Page not found</h1>
-      <HiOutlineEmojiSad size="256px" />
+      <FcReddit size="256px" />
     </div>
   );
 }

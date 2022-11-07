@@ -38,7 +38,7 @@
   border-width: 0;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
-  background: #8c7c75;
+  background: gray;
 
   color: white;
   font-size: 14px;
@@ -47,5 +47,5 @@
 
 .btnForm:hover,
 .btnForm:focus {
-  background: #2c2624;
+  background: DarkSlateGrey;
 }

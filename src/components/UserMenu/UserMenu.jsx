@@ -21,11 +21,28 @@ export const UserMenu = () => {
 
   return (
     <nav className={style.navWrapper}>
+      <NavLink
+        className={style.link}
+        to="/"
+        style={({ isActive }) => ({
+          background: isActive ? 'DarkSlateGrey' : 'gray',
+        })}
+      >
+        Home
+      </NavLink>
+
       {isLoggedIn && (
-        <NavLink className={style.link} to="/contacts">
+        <NavLink
+          className={style.link}
+          to="/contacts"
+          style={({ isActive }) => ({
+            background: isActive ? 'DarkSlateGrey' : 'gray',
+          })}
+        >
           Contacts
         </NavLink>
       )}
+
       {isLoggedIn ? (
         <div className={style.userWrapper}>
           <p className={style.greeting}>{`Hello, ${user.name}!`}</p>
