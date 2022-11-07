@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAuth } from 'redux/mySlice/authSlice';
 import { logoutUser } from 'redux/authOperations';
 import { NavLink, useNavigate } from 'react-router-dom';
-import css from '../UserMenu/UserMenu.module.css';
+import style from '../UserMenu/UserMenu.module.css';
 
 export const UserMenu = () => {
   const { user, isLoggedIn } = useSelector(getAuth);
@@ -16,25 +16,25 @@ export const UserMenu = () => {
   };
 
   const getClassName = ({ isActive }) => {
-    return isActive ? `${css.link} ${css.active}` : css.link;
+    return isActive ? `${style.link} ${style.active}` : style.link;
   };
 
   return (
-    <nav className={css.navWrapper}>
+    <nav className={style.navWrapper}>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink className={style.link} to="/contacts">
           Contacts
         </NavLink>
       )}
       {isLoggedIn ? (
-        <div className={css.userWrapper}>
-          <p className={css.greeting}>{`Welcome, ${user.name}!`}</p>
-          <button className={css.link} type="button" onClick={onLogoutClick}>
+        <div className={style.userWrapper}>
+          <p className={style.greeting}>{`Hello, ${user.name}!`}</p>
+          <button className={style.link} type="button" onClick={onLogoutClick}>
             Log Out
           </button>
         </div>
       ) : (
-        <div className={css.menuWrapper}>
+        <div className={style.menuWrapper}>
           <NavLink className={getClassName} to="/register">
             Sign Up
           </NavLink>

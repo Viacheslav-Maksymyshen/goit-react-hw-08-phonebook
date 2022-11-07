@@ -7,9 +7,8 @@ import { fetchCurrentUser } from 'redux/authOperations';
 import { getAuth } from 'redux/mySlice/authSlice';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 import { PublicRoute } from './PublicRoute/PublicRoute';
-
 import { Layout } from './Layout/Layout';
-import { LoaderRoute } from './Loader/Loader';
+import { Loader } from './Loader/Loader';
 const Phonebook = lazy(() => import('pages/Phonebook/Phonebook'));
 const RegisterForm = lazy(() => import('pages/RegisterForm/RegistrForm'));
 const LoginForm = lazy(() => import('pages/LoginForm/loginForm'));
@@ -26,7 +25,7 @@ export const App = () => {
   return (
     <>
       {isLoadingUser ? (
-        <LoaderRoute />
+        <Loader />
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>

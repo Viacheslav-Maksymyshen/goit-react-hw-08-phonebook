@@ -37,7 +37,6 @@ export default function ContactForm() {
       case 'number':
         setNumber(value);
         break;
-
       default:
         break;
     }

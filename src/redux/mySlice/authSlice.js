@@ -30,12 +30,12 @@ export const authSlice = createSlice({
       state.isLoggedIn = true;
       state.token = payload.token;
       state.user = payload.user;
-      toast.success('Successfully registered!');
+      toast.success('Congratulations! You are registered.');
     },
     [registerUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something is wrong, try again!');
+      toast.error('Error! try again');
     },
     [loginUser.pending](state) {
       state.isLoading = true;
@@ -46,12 +46,12 @@ export const authSlice = createSlice({
       state.isLoggedIn = true;
       state.token = payload.token;
       state.user = payload.user;
-      toast.success('Successfully logged in!');
+      toast.success('Congratulations! logged in.');
     },
     [loginUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something is wrong, try again!');
+      toast.error('Error! try again.');
     },
     [logoutUser.pending](state) {
       state.isLoading = true;
@@ -62,12 +62,12 @@ export const authSlice = createSlice({
       state.isLoggedIn = false;
       state.user = { name: null, email: null };
       state.token = null;
-      toast.success('Successfully logged out! Waiting for you to come back!');
+      toast.success('Congratulations! logged out.');
     },
     [logoutUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something is wrong, try again later!');
+      toast.error('Error! try again.');
     },
     [fetchCurrentUser.pending](state) {
       state.isLoadingUser = true;
