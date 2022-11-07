@@ -92,9 +92,8 @@ const RegisterForm = () => {
           value={password}
           onChange={handleChange}
           required
-          pattern="[0-9a-fA-F]{7,12}"
           placeholder="Type your password"
-          title="The password must contain from 7 to 12 characters"
+          title="The password must contain from 7  characters"
           className={styles.inputForm}
         />
         {!isLoading ? (
