@@ -9,6 +9,7 @@ import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 import { PublicRoute } from './PublicRoute/PublicRoute';
 import { Layout } from './Layout/Layout';
 import { Loader } from './Loader/Loader';
+const Home = lazy(() => import('pages/HomePage'));
 const Phonebook = lazy(() => import('pages/Phonebook/Phonebook'));
 const RegisterForm = lazy(() => import('pages/RegisterForm/RegistrForm'));
 const LoginForm = lazy(() => import('pages/LoginForm/loginForm'));
@@ -29,6 +30,7 @@ export const App = () => {
       ) : (
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
             <Route
               path="/register"
               element={
