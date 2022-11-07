@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[469],{1469:function(e,t,r){r.r(t),r.d(t,{default:function(){return c}});var n=r(9e3),o="HomePage_NotFoundPage__kHCBz",a=r(184);function c(){return(0,a.jsxs)("div",{className:o,children:[(0,a.jsx)("h1",{children:"Corporate directory of contacts."}),(0,a.jsx)(n.nWT,{size:"256px"})]})}}}]);
+//# sourceMappingURL=469.5e03706a.chunk.js.map
